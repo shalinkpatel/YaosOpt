@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="YaosApp"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\usr\;CMake Files\..\..\usr\lib\;CMake Files\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\Boost-1.71.0\;CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_headers-1.71.0\;CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_thread-1.71.0\;CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_atomic-1.71.0\;CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_system-1.71.0\;CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_filesystem-1.71.0\;CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_log-1.71.0\;CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_chrono-1.71.0\;CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_date_time-1.71.0\;CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_regex-1.71.0\;CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_log_setup-1.71.0\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\_deps\;CMake Files\cmake-build-debug\_deps\doctest-src\;CMake Files\cmake-build-debug\_deps\doctest-src\scripts\;CMake Files\cmake-build-debug\_deps\doctest-src\scripts\cmake\;CMake Files\test\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="check">
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 check"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ot_test">
+				<Option output="/tmp/yaos/cmake-build-debug/ot_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DENABLE_DOCTEST_IN_LIBRARY"/>
+					<Add directory="/tmp/yaos/include-shared"/>
+					<Add directory="/tmp/yaos/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 ot_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ot_test/fast">
+				<Option output="/tmp/yaos/cmake-build-debug/ot_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DENABLE_DOCTEST_IN_LIBRARY"/>
+					<Add directory="/tmp/yaos/include-shared"/>
+					<Add directory="/tmp/yaos/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 ot_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="yaos_garbler">
+				<Option output="/tmp/yaos/cmake-build-debug/yaos_garbler" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DENABLE_DOCTEST_IN_LIBRARY"/>
+					<Add directory="/tmp/yaos/include-shared"/>
+					<Add directory="/tmp/yaos/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 yaos_garbler"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="yaos_garbler/fast">
+				<Option output="/tmp/yaos/cmake-build-debug/yaos_garbler" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DENABLE_DOCTEST_IN_LIBRARY"/>
+					<Add directory="/tmp/yaos/include-shared"/>
+					<Add directory="/tmp/yaos/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 yaos_garbler/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="yaos_app_lib_shared">
+				<Option output="/tmp/yaos/cmake-build-debug/libyaos_app_lib_shared.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DENABLE_DOCTEST_IN_LIBRARY"/>
+					<Add option="-DBOOST_ALL_NO_LIB"/>
+					<Add directory="/tmp/yaos/include-shared"/>
+					<Add directory="/tmp/yaos/cmake-build-debug/_deps/doctest-src"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 yaos_app_lib_shared"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="yaos_app_lib_shared/fast">
+				<Option output="/tmp/yaos/cmake-build-debug/libyaos_app_lib_shared.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DENABLE_DOCTEST_IN_LIBRARY"/>
+					<Add option="-DBOOST_ALL_NO_LIB"/>
+					<Add directory="/tmp/yaos/include-shared"/>
+					<Add directory="/tmp/yaos/cmake-build-debug/_deps/doctest-src"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 yaos_app_lib_shared/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="yaos_app_lib">
+				<Option output="/tmp/yaos/cmake-build-debug/libyaos_app_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DENABLE_DOCTEST_IN_LIBRARY"/>
+					<Add directory="/tmp/yaos/include-shared"/>
+					<Add directory="/tmp/yaos/include"/>
+					<Add directory="/tmp/yaos/cmake-build-debug/_deps/doctest-src"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 yaos_app_lib"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="yaos_app_lib/fast">
+				<Option output="/tmp/yaos/cmake-build-debug/libyaos_app_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DENABLE_DOCTEST_IN_LIBRARY"/>
+					<Add directory="/tmp/yaos/include-shared"/>
+					<Add directory="/tmp/yaos/include"/>
+					<Add directory="/tmp/yaos/cmake-build-debug/_deps/doctest-src"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 yaos_app_lib/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="doc">
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 doc"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Experimental">
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 Experimental"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Continuous">
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 Continuous"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Nightly">
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 Nightly"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="yaos_evaluator">
+				<Option output="/tmp/yaos/cmake-build-debug/yaos_evaluator" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DENABLE_DOCTEST_IN_LIBRARY"/>
+					<Add directory="/tmp/yaos/include-shared"/>
+					<Add directory="/tmp/yaos/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 yaos_evaluator"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="yaos_evaluator/fast">
+				<Option output="/tmp/yaos/cmake-build-debug/yaos_evaluator" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/yaos/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DENABLE_DOCTEST_IN_LIBRARY"/>
+					<Add directory="/tmp/yaos/include-shared"/>
+					<Add directory="/tmp/yaos/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 yaos_evaluator/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="doctest_with_main">
+				<Option output="/tmp/yaos/cmake-build-debug/_deps/doctest-build/libdoctest_with_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/yaos/cmake-build-debug/_deps/doctest-build"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDOCTEST_CONFIG_IMPLEMENT_WITH_MAIN"/>
+					<Add option="-DENABLE_DOCTEST_IN_LIBRARY"/>
+					<Add directory="/tmp/yaos/cmake-build-debug/_deps/doctest-src"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/_deps/doctest-build/Makefile&quot;  VERBOSE=1 doctest_with_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/_deps/doctest-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/_deps/doctest-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/_deps/doctest-build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="doctest_with_main/fast">
+				<Option output="/tmp/yaos/cmake-build-debug/_deps/doctest-build/libdoctest_with_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/yaos/cmake-build-debug/_deps/doctest-build"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDOCTEST_CONFIG_IMPLEMENT_WITH_MAIN"/>
+					<Add option="-DENABLE_DOCTEST_IN_LIBRARY"/>
+					<Add directory="/tmp/yaos/cmake-build-debug/_deps/doctest-src"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/_deps/doctest-build/Makefile&quot;  VERBOSE=1 doctest_with_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/_deps/doctest-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/_deps/doctest-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/_deps/doctest-build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="unit_tests">
+				<Option output="/tmp/yaos/cmake-build-debug/unit_tests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/yaos/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DENABLE_DOCTEST_IN_LIBRARY"/>
+					<Add directory="/tmp/yaos/include-shared"/>
+					<Add directory="/tmp/yaos/include"/>
+					<Add directory="/tmp/yaos/cmake-build-debug/_deps/doctest-src"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 unit_tests"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="unit_tests/fast">
+				<Option output="/tmp/yaos/cmake-build-debug/unit_tests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/yaos/cmake-build-debug/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DENABLE_DOCTEST_IN_LIBRARY"/>
+					<Add directory="/tmp/yaos/include-shared"/>
+					<Add directory="/tmp/yaos/include"/>
+					<Add directory="/tmp/yaos/cmake-build-debug/_deps/doctest-src"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 unit_tests/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/tmp/yaos/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/tmp/yaos/cmake-build-debug/_deps/doctest-src/doctest/parts/doctest.cpp">
+			<Option target="doctest_with_main"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/src-shared/circuit.cxx">
+			<Option target="yaos_app_lib_shared"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/src-shared/logger.cxx">
+			<Option target="yaos_app_lib_shared"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/src-shared/messages.cxx">
+			<Option target="yaos_app_lib_shared"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/src-shared/util.cxx">
+			<Option target="yaos_app_lib_shared"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/src/cmd/evaluator.cxx">
+			<Option target="yaos_evaluator"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/src/cmd/garbler.cxx">
+			<Option target="yaos_garbler"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/src/cmd/ot_test.cxx">
+			<Option target="ot_test"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/src/drivers/cli_driver.cxx">
+			<Option target="yaos_app_lib"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/src/drivers/crypto_driver.cxx">
+			<Option target="yaos_app_lib"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/src/drivers/network_driver.cxx">
+			<Option target="yaos_app_lib"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/src/drivers/ot_driver.cxx">
+			<Option target="yaos_app_lib"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/src/pkg/evaluator.cxx">
+			<Option target="yaos_app_lib"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/src/pkg/garbler.cxx">
+			<Option target="yaos_app_lib"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/test/test_provided.cxx">
+			<Option target="unit_tests"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/Doxyfile.in">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/cmake/Boost.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/cmake/Curses.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/cmake/Doctest.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/cmake/Documentation.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/cmake/Warnings.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/BoostDetectToolset-1.71.0.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\Boost-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\Boost-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.71.0/boost_headers-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_headers-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.71.0/boost_headers-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_headers-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_thread-1.71.0/boost_thread-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_thread-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_thread-1.71.0/boost_thread-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_thread-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_thread-1.71.0/libboost_thread-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_thread-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_thread-1.71.0/libboost_thread-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_thread-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.71.0/boost_atomic-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_atomic-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.71.0/boost_atomic-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_atomic-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.71.0/libboost_atomic-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_atomic-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_atomic-1.71.0/libboost_atomic-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_atomic-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_system-1.71.0/boost_system-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_system-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_system-1.71.0/boost_system-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_system-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_system-1.71.0/libboost_system-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_system-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_system-1.71.0/libboost_system-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_system-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.71.0/boost_filesystem-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_filesystem-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.71.0/boost_filesystem-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_filesystem-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.71.0/libboost_filesystem-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_filesystem-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_filesystem-1.71.0/libboost_filesystem-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_filesystem-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_log-1.71.0/boost_log-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_log-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_log-1.71.0/boost_log-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_log-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_log-1.71.0/libboost_log-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_log-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_log-1.71.0/libboost_log-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_log-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_chrono-1.71.0/boost_chrono-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_chrono-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_chrono-1.71.0/boost_chrono-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_chrono-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_chrono-1.71.0/libboost_chrono-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_chrono-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_chrono-1.71.0/libboost_chrono-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_chrono-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_date_time-1.71.0/boost_date_time-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_date_time-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_date_time-1.71.0/boost_date_time-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_date_time-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_date_time-1.71.0/libboost_date_time-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_date_time-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_date_time-1.71.0/libboost_date_time-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_date_time-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_regex-1.71.0/boost_regex-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_regex-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_regex-1.71.0/boost_regex-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_regex-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_regex-1.71.0/libboost_regex-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_regex-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_regex-1.71.0/libboost_regex-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_regex-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_log_setup-1.71.0/boost_log_setup-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_log_setup-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_log_setup-1.71.0/boost_log_setup-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_log_setup-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_log_setup-1.71.0/libboost_log_setup-variant-shared.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_log_setup-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/../../usr/lib/x86_64-linux-gnu/cmake/boost_log_setup-1.71.0/libboost_log_setup-variant-static.cmake">
+			<Option virtualFolder="CMake Files\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_log_setup-1.71.0\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/cmake-build-debug/_deps/doctest-src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cmake-build-debug\_deps\doctest-src\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/cmake-build-debug/_deps/doctest-src/scripts/cmake/Config.cmake.in">
+			<Option virtualFolder="CMake Files\cmake-build-debug\_deps\doctest-src\scripts\cmake\"/>
+		</Unit>
+		<Unit filename="/tmp/yaos/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

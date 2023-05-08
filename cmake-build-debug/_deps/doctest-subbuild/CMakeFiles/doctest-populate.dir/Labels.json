@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/tmp/yaos/cmake-build-debug/_deps/doctest-subbuild/CMakeFiles/doctest-populate"
+		},
+		{
+			"file" : "/tmp/yaos/cmake-build-debug/_deps/doctest-subbuild/CMakeFiles/doctest-populate.rule"
+		},
+		{
+			"file" : "/tmp/yaos/cmake-build-debug/_deps/doctest-subbuild/CMakeFiles/doctest-populate-complete.rule"
+		},
+		{
+			"file" : "/tmp/yaos/cmake-build-debug/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-install.rule"
+		},
+		{
+			"file" : "/tmp/yaos/cmake-build-debug/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-mkdir.rule"
+		},
+		{
+			"file" : "/tmp/yaos/cmake-build-debug/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-download.rule"
+		},
+		{
+			"file" : "/tmp/yaos/cmake-build-debug/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-update.rule"
+		},
+		{
+			"file" : "/tmp/yaos/cmake-build-debug/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-patch.rule"
+		},
+		{
+			"file" : "/tmp/yaos/cmake-build-debug/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-configure.rule"
+		},
+		{
+			"file" : "/tmp/yaos/cmake-build-debug/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-build.rule"
+		},
+		{
+			"file" : "/tmp/yaos/cmake-build-debug/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"doctest-populate"
+		],
+		"name" : "doctest-populate"
+	}
+}
