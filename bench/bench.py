@@ -7,11 +7,11 @@ bench_name = sys.argv[1]
 TRIES = 50
 circuits = get_valid_ciruits('..')
 
-with open(f'{bench_name}-bench-results.csv', 'w', newline='') as f:
+with open(f'{bench_name}-bench.csv', 'w', newline='') as f:
     w = csv.writer(f)
     w.writerow(['case', 'runtime'])
     for c in circuits:
-        print(f"{bcolors.OKGREEN}Running Circuit{bcolors.ENDC}: {bcolors.OKBLUE}{c}{bcolors.ENDC} {bcolors.WARNING}", end='', flush=True)
+        print(f"{bcolors.OKGREEN}Benchmarking Circuit{bcolors.ENDC}: {bcolors.OKBLUE}{c}{bcolors.ENDC} {bcolors.WARNING}", end='', flush=True)
         timings = []
         for _ in range(TRIES):
             res = run_circuit(c, '..')

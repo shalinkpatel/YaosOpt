@@ -1,0 +1,6 @@
+name,circuit,runtime
+baseline,and,0.021695480346679688
+baseline,xor,0.021318802833557127
+baseline,aes,5.305128617286682
+baseline,mult,1.5217367219924927
+baseline,adder,0.8739201164245606
