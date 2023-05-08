@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/cs1515-user/yaos/src/cmd/ot_test.cxx" "/home/cs1515-user/yaos/build/CMakeFiles/ot_test.dir/src/cmd/ot_test.cxx.o"
+  "/home/cs1515-user/yaosopt/src/cmd/ot_test.cxx" "/home/cs1515-user/yaosopt/build/CMakeFiles/ot_test.dir/src/cmd/ot_test.cxx.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -21,8 +21,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/cs1515-user/yaos/build/CMakeFiles/yaos_app_lib.dir/DependInfo.cmake"
-  "/home/cs1515-user/yaos/build/CMakeFiles/yaos_app_lib_shared.dir/DependInfo.cmake"
+  "/home/cs1515-user/yaosopt/build/CMakeFiles/yaos_app_lib.dir/DependInfo.cmake"
+  "/home/cs1515-user/yaosopt/build/CMakeFiles/yaos_app_lib_shared.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

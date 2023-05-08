@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cs1515-user/yaos
+CMAKE_SOURCE_DIR = /home/cs1515-user/yaosopt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cs1515-user/yaos/build
+CMAKE_BINARY_DIR = /home/cs1515-user/yaosopt/build
 
 # Utility rule file for ContinuousUpdate.
 
@@ -71,6 +71,6 @@ CMakeFiles/ContinuousUpdate.dir/clean:
 .PHONY : CMakeFiles/ContinuousUpdate.dir/clean
 
 CMakeFiles/ContinuousUpdate.dir/depend:
-	cd /home/cs1515-user/yaos/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cs1515-user/yaos /home/cs1515-user/yaos /home/cs1515-user/yaos/build /home/cs1515-user/yaos/build /home/cs1515-user/yaos/build/CMakeFiles/ContinuousUpdate.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/cs1515-user/yaosopt/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cs1515-user/yaosopt /home/cs1515-user/yaosopt /home/cs1515-user/yaosopt/build /home/cs1515-user/yaosopt/build /home/cs1515-user/yaosopt/build/CMakeFiles/ContinuousUpdate.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ContinuousUpdate.dir/depend
 

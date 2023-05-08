@@ -75,6 +75,8 @@ GarblerClient::HandleKeyExchange() {
 std::string GarblerClient::run(std::vector<int> input) {
   // Key exchange
   auto keys = this->HandleKeyExchange();
+  this->AES_key = keys.first;
+  this->HMAC_key = keys.second;
 
   // DONE: implement me!
   GarbledLabels labels = this->generate_labels(this->circuit);
@@ -179,14 +181,20 @@ GarbledLabels GarblerClient::generate_labels(Circuit circuit) {
   output_labels.zeros.resize(circuit.num_wire);
   output_labels.ones.resize(circuit.num_wire);
   for (auto gate : circuit.gates) {
-    GarbledWire lhs0(generate_label());
-    GarbledWire lhs1(generate_label());
+    GarbledWire lhs0;
+    lhs0.value = generate_label();
+    GarbledWire lhs1;
+    lhs1.value = generate_label();
 
-    GarbledWire rhs0(generate_label());
-    GarbledWire rhs1(generate_label());
+    GarbledWire rhs0;
+    rhs0.value = generate_label();
+    GarbledWire rhs1;
+    rhs1.value = generate_label();
 
-    GarbledWire out0(generate_label());
-    GarbledWire out1(generate_label());
+    GarbledWire out0;
+    out0.value = generate_label();
+    GarbledWire out1;
+    out1.value = generate_label();
 
     output_labels.zeros.at(gate.lhs) = lhs0; output_labels.zeros.at(gate.rhs) = rhs0; output_labels.zeros.at(gate.output) = out0;
     output_labels.ones.at(gate.lhs) = lhs1; output_labels.ones.at(gate.rhs) = rhs1; output_labels.ones.at(gate.output) = out1;
@@ -204,11 +212,10 @@ CryptoPP::SecByteBlock GarblerClient::encrypt_label(GarbledWire lhs,
                                                     GarbledWire output) {
   // DONE: implement me!
   auto hashed_val = this->crypto_driver->hash_inputs(lhs.value, rhs.value);
-  CryptoPP::SecByteBlock zeros;
-  zeros.CleanNew(LABEL_TAG_LENGTH);
-  auto output_val = this->crypto_driver->hash_inputs(output.value, zeros);
+  SecByteBlock expanded_output(output.value);
+  expanded_output.CleanGrow(LABEL_LENGTH + LABEL_TAG_LENGTH);
 
-  CryptoPP::xorbuf(hashed_val, output_val, LABEL_LENGTH + LABEL_TAG_LENGTH);
+  CryptoPP::xorbuf(hashed_val, expanded_output, LABEL_LENGTH + LABEL_TAG_LENGTH);
   return hashed_val;
 }
 

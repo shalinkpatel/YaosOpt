@@ -73,8 +73,8 @@ EvaluatorClient::HandleKeyExchange() {
 std::string EvaluatorClient::run(std::vector<int> input) {
   // Key exchange
   auto keys = this->HandleKeyExchange();
-  auto AES_key = keys.first;
-  auto HMAC_key = keys.second;
+  this->AES_key = keys.first;
+  this->HMAC_key = keys.second;
 
   // TODO: implement me!
   GarblerToEvaluator_GarbledTables_Message ge_gt_msg;
@@ -98,14 +98,53 @@ std::string EvaluatorClient::run(std::vector<int> input) {
   std::vector<GarbledWire> evaluator_inputs;
   for (int i = 0; i < circuit.evaluator_input_length; ++i) {
     auto label = this->ot_driver->OT_recv(input.at(i));
-    GarbledWire wire(string_to_byteblock(label));
+    GarbledWire wire;
+    wire.value = string_to_byteblock(label);
     evaluator_inputs.push_back(wire);
   }
 
-  GarbledWire curr_out;
-  for (auto gate : garbled_gates) {
-      curr_out =
+  std::vector<GarbledWire> garbled_wires(this->circuit.num_wire);
+  // copy the garbler's inputs in
+  for (int i = 0; i < circuit.garbler_input_length; i++) {
+    garbled_wires.at(i) = garbler_inputs.at(i);
   }
+  // copy the evaluators inputs in
+  for (int i = 0; i < circuit.evaluator_input_length; i++) {
+    garbled_wires.at(circuit.garbler_input_length + i) = evaluator_inputs.at(i);
+  }
+  // evaluate remaining wires
+  for (int i = 0; i < circuit.num_gate; i++) {
+    Gate gate = circuit.gates.at(i);
+    GarbledWire wire;
+    if (gate.type == GateType::NOT_GATE) {
+      GarbledWire dummy_wire;
+      dummy_wire.value = DUMMY_RHS;
+      wire = this->evaluate_gate(
+          garbled_gates.at(i), garbled_wires.at(gate.lhs), dummy_wire);
+    } else {
+      wire = this->evaluate_gate(
+          garbled_gates.at(i), garbled_wires.at(gate.lhs), garbled_wires.at(gate.rhs));
+    }
+    garbled_wires.at(gate.output) = wire;
+  }
+
+  EvaluatorToGarbler_FinalLabels_Message finalLabelsMessage;
+  for (int i = 0; i < circuit.output_length; i++) {
+    finalLabelsMessage.final_labels.push_back(garbled_wires.at(circuit.num_wire - circuit.output_length + i));
+  }
+  this->network_driver->send(this->crypto_driver->encrypt_and_tag(this->AES_key, this->HMAC_key, &finalLabelsMessage));
+
+  // receive final output
+  GarblerToEvaluator_FinalOutput_Message finalOutputMessage;
+  auto finalOutputMessage_data = this->crypto_driver->decrypt_and_verify(AES_key, HMAC_key, this->network_driver->read());
+  if (!finalOutputMessage_data.second) {
+    this->network_driver->disconnect();
+    throw std::runtime_error("oopsie poopsie 2");
+  }
+  finalOutputMessage.deserialize(finalOutputMessage_data.first);
+
+  std::cout << finalOutputMessage.final_output << std::endl;
+  return finalOutputMessage.final_output;
 }
 
 /**
@@ -117,15 +156,18 @@ std::string EvaluatorClient::run(std::vector<int> input) {
 GarbledWire EvaluatorClient::evaluate_gate(GarbledGate gate, GarbledWire lhs,
                                         GarbledWire rhs) {
   // DONE: implement me!
+  GarbledWire out;
   for (auto entry : gate.entries) {
     SecByteBlock hashed_val = this->crypto_driver->hash_inputs(lhs.value, rhs.value);
     CryptoPP::xorbuf(hashed_val, entry, LABEL_LENGTH + LABEL_TAG_LENGTH);
     if (verify_decryption(hashed_val)) {
       SecByteBlock head = snip_decryption(hashed_val);
-      GarbledWire out(head);
+      out.value = head;
       return out;
     }
   }
+  out.value = string_to_byteblock("");
+  return out;
 }
 
 /**
