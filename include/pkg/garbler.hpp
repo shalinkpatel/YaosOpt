@@ -17,7 +17,7 @@ public:
                                           GarbledLabels labels);
   CryptoPP::SecByteBlock encrypt_label(GarbledWire lhs, GarbledWire rhs,
                                        GarbledWire output);
-  CryptoPP::SecByteBlock generate_label();
+  CryptoPP::SecByteBlock generate_label(byte select_bit);
   std::vector<GarbledWire> get_garbled_wires(GarbledLabels labels,
                                              std::vector<int> input, int begin);
 

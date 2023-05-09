@@ -30,6 +30,9 @@ CryptoPP::SecByteBlock integer_to_byteblock(const CryptoPP::Integer &x);
 std::string byteblock_to_string(const CryptoPP::SecByteBlock &block);
 CryptoPP::SecByteBlock string_to_byteblock(const std::string &s);
 
+// Others
+bool random_bit();
+
 // Printers.
 void print_string_as_hex(std::string str);
 void print_key_as_int(const CryptoPP::SecByteBlock &block);

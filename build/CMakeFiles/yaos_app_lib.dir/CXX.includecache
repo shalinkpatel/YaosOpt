@@ -22,8 +22,6 @@ crypto++/integer.h
 crypto++/secblock.h
 -
 
-/home/cs1515-user/yaosopt/include-shared/colors.hpp
-
 /home/cs1515-user/yaosopt/include-shared/constants.hpp
 crypto++/cryptlib.h
 -
@@ -250,26 +248,6 @@ crypto++/sha.h
 ../../include/drivers/ot_driver.hpp
 /home/cs1515-user/yaosopt/include/drivers/ot_driver.hpp
 
-/home/cs1515-user/yaosopt/src/drivers/cli_driver.cxx
-cmath
--
-iomanip
--
-iostream
--
-stdexcept
--
-term.h
--
-unistd.h
--
-../../include-shared/colors.hpp
-/home/cs1515-user/yaosopt/include-shared/colors.hpp
-../../include-shared/constants.hpp
-/home/cs1515-user/yaosopt/include-shared/constants.hpp
-../../include/drivers/cli_driver.hpp
-/home/cs1515-user/yaosopt/include/drivers/cli_driver.hpp
-
 /home/cs1515-user/yaosopt/src/drivers/crypto_driver.cxx
 iostream
 -
@@ -301,14 +279,6 @@ crypto++/queue.h
 /home/cs1515-user/yaosopt/include-shared/util.hpp
 ../../include/drivers/crypto_driver.hpp
 /home/cs1515-user/yaosopt/include/drivers/crypto_driver.hpp
-
-/home/cs1515-user/yaosopt/src/drivers/network_driver.cxx
-stdexcept
--
-vector
--
-../../include/drivers/network_driver.hpp
-/home/cs1515-user/yaosopt/include/drivers/network_driver.hpp
 
 /home/cs1515-user/yaosopt/src/drivers/ot_driver.cxx
 iostream

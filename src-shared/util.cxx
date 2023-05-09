@@ -1,3 +1,4 @@
+#include <crypto++/osrng.h>
 #include "../include-shared/util.hpp"
 
 /**
@@ -65,6 +66,10 @@ std::string byteblock_to_string(const CryptoPP::SecByteBlock &block) {
 CryptoPP::SecByteBlock string_to_byteblock(const std::string &s) {
   CryptoPP::SecByteBlock block(reinterpret_cast<const byte *>(&s[0]), s.size());
   return block;
+}
+
+bool random_bit() {
+  return (std::rand() % 2) == 0;
 }
 
 /**
