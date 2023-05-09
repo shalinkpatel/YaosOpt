@@ -150,7 +150,7 @@ std::vector<GarbledGate> GarblerClient::generate_gates(Circuit circuit,
       w_right_1 = dummy_wire;
 
       p_right_0 = first_byte(DUMMY_RHS) % 2;
-      p_right_1 = (p_right_0 + 1) % 2;
+      p_right_1 = p_right_0;
     }
 
     // No longer randomly shuffle, look at the last bit of each label to calculate where to put the correct encryption.
