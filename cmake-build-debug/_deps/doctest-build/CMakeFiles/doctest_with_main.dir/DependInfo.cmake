@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/tmp/yaos/cmake-build-debug/_deps/doctest-src/doctest/parts/doctest.cpp" "/tmp/yaos/cmake-build-debug/_deps/doctest-build/CMakeFiles/doctest_with_main.dir/doctest/parts/doctest.cpp.o"
+  "/tmp/yaosopt/cmake-build-debug/_deps/doctest-src/doctest/parts/doctest.cpp" "/tmp/yaosopt/cmake-build-debug/_deps/doctest-build/CMakeFiles/doctest_with_main.dir/doctest/parts/doctest.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

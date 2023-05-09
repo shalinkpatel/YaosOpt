@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/tmp/yaos/src/cmd/garbler.cxx" "/tmp/yaos/cmake-build-debug/CMakeFiles/yaos_garbler.dir/src/cmd/garbler.cxx.o"
+  "/tmp/yaosopt/src/cmd/garbler.cxx" "/tmp/yaosopt/cmake-build-debug/CMakeFiles/yaos_garbler.dir/src/cmd/garbler.cxx.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -21,8 +21,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/tmp/yaos/cmake-build-debug/CMakeFiles/yaos_app_lib.dir/DependInfo.cmake"
-  "/tmp/yaos/cmake-build-debug/CMakeFiles/yaos_app_lib_shared.dir/DependInfo.cmake"
+  "/tmp/yaosopt/cmake-build-debug/CMakeFiles/yaos_app_lib.dir/DependInfo.cmake"
+  "/tmp/yaosopt/cmake-build-debug/CMakeFiles/yaos_app_lib_shared.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

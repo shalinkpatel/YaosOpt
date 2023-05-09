@@ -12,8 +12,8 @@ project(doctest-populate NONE)
 include(ExternalProject)
 ExternalProject_Add(doctest-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/onqtam/doctest" "GIT_TAG" "932a2ca50666138256dae56fbb16db3b1cae133a"
-                    SOURCE_DIR          "/tmp/yaos/cmake-build-debug/_deps/doctest-src"
-                    BINARY_DIR          "/tmp/yaos/cmake-build-debug/_deps/doctest-build"
+                    SOURCE_DIR          "/tmp/yaosopt/cmake-build-debug/_deps/doctest-src"
+                    BINARY_DIR          "/tmp/yaosopt/cmake-build-debug/_deps/doctest-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

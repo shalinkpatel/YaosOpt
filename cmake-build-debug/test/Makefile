@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/yaos
+CMAKE_SOURCE_DIR = /tmp/yaosopt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/yaos/cmake-build-debug
+CMAKE_BINARY_DIR = /tmp/yaosopt/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /tmp/yaos/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /tmp/yaos/cmake-build-debug/CMakeFiles /tmp/yaos/cmake-build-debug/test/CMakeFiles/progress.marks
-	cd /tmp/yaos/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 test/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/yaos/cmake-build-debug/CMakeFiles 0
+	cd /tmp/yaosopt/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /tmp/yaosopt/cmake-build-debug/CMakeFiles /tmp/yaosopt/cmake-build-debug/test/CMakeFiles/progress.marks
+	cd /tmp/yaosopt/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 test/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/yaosopt/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /tmp/yaos/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 test/clean
+	cd /tmp/yaosopt/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 test/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /tmp/yaos/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
+	cd /tmp/yaosopt/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /tmp/yaos/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
+	cd /tmp/yaosopt/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /tmp/yaos/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /tmp/yaosopt/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 test/CMakeFiles/unit_tests.dir/rule:
-	cd /tmp/yaos/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/unit_tests.dir/rule
+	cd /tmp/yaosopt/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/unit_tests.dir/rule
 .PHONY : test/CMakeFiles/unit_tests.dir/rule
 
 # Convenience name for target.
@@ -179,7 +179,7 @@ unit_tests: test/CMakeFiles/unit_tests.dir/rule
 
 # fast build rule for target.
 unit_tests/fast:
-	cd /tmp/yaos/cmake-build-debug && $(MAKE) -f test/CMakeFiles/unit_tests.dir/build.make test/CMakeFiles/unit_tests.dir/build
+	cd /tmp/yaosopt/cmake-build-debug && $(MAKE) -f test/CMakeFiles/unit_tests.dir/build.make test/CMakeFiles/unit_tests.dir/build
 .PHONY : unit_tests/fast
 
 test_provided.o: test_provided.cxx.o
@@ -188,7 +188,7 @@ test_provided.o: test_provided.cxx.o
 
 # target to build an object file
 test_provided.cxx.o:
-	cd /tmp/yaos/cmake-build-debug && $(MAKE) -f test/CMakeFiles/unit_tests.dir/build.make test/CMakeFiles/unit_tests.dir/test_provided.cxx.o
+	cd /tmp/yaosopt/cmake-build-debug && $(MAKE) -f test/CMakeFiles/unit_tests.dir/build.make test/CMakeFiles/unit_tests.dir/test_provided.cxx.o
 .PHONY : test_provided.cxx.o
 
 test_provided.i: test_provided.cxx.i
@@ -197,7 +197,7 @@ test_provided.i: test_provided.cxx.i
 
 # target to preprocess a source file
 test_provided.cxx.i:
-	cd /tmp/yaos/cmake-build-debug && $(MAKE) -f test/CMakeFiles/unit_tests.dir/build.make test/CMakeFiles/unit_tests.dir/test_provided.cxx.i
+	cd /tmp/yaosopt/cmake-build-debug && $(MAKE) -f test/CMakeFiles/unit_tests.dir/build.make test/CMakeFiles/unit_tests.dir/test_provided.cxx.i
 .PHONY : test_provided.cxx.i
 
 test_provided.s: test_provided.cxx.s
@@ -206,7 +206,7 @@ test_provided.s: test_provided.cxx.s
 
 # target to generate assembly for a file
 test_provided.cxx.s:
-	cd /tmp/yaos/cmake-build-debug && $(MAKE) -f test/CMakeFiles/unit_tests.dir/build.make test/CMakeFiles/unit_tests.dir/test_provided.cxx.s
+	cd /tmp/yaosopt/cmake-build-debug && $(MAKE) -f test/CMakeFiles/unit_tests.dir/build.make test/CMakeFiles/unit_tests.dir/test_provided.cxx.s
 .PHONY : test_provided.cxx.s
 
 # Help Target
@@ -237,6 +237,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /tmp/yaos/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /tmp/yaosopt/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,15 +1,15 @@
 
-if(NOT "/tmp/yaos/cmake-build-debug/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitinfo.txt" IS_NEWER_THAN "/tmp/yaos/cmake-build-debug/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitclone-lastrun.txt")
-  message(STATUS "Avoiding repeated git clone, stamp file is up to date: '/tmp/yaos/cmake-build-debug/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitclone-lastrun.txt'")
+if(NOT "/tmp/yaosopt/cmake-build-debug/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitinfo.txt" IS_NEWER_THAN "/tmp/yaosopt/cmake-build-debug/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitclone-lastrun.txt")
+  message(STATUS "Avoiding repeated git clone, stamp file is up to date: '/tmp/yaosopt/cmake-build-debug/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitclone-lastrun.txt'")
   return()
 endif()
 
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E remove_directory "/tmp/yaos/cmake-build-debug/_deps/doctest-src"
+  COMMAND ${CMAKE_COMMAND} -E remove_directory "/tmp/yaosopt/cmake-build-debug/_deps/doctest-src"
   RESULT_VARIABLE error_code
   )
 if(error_code)
-  message(FATAL_ERROR "Failed to remove directory: '/tmp/yaos/cmake-build-debug/_deps/doctest-src'")
+  message(FATAL_ERROR "Failed to remove directory: '/tmp/yaosopt/cmake-build-debug/_deps/doctest-src'")
 endif()
 
 # try the clone 3 times in case there is an odd git clone issue
@@ -18,7 +18,7 @@ set(number_of_tries 0)
 while(error_code AND number_of_tries LESS 3)
   execute_process(
     COMMAND "/usr/bin/git"  clone --no-checkout "https://github.com/onqtam/doctest" "doctest-src"
-    WORKING_DIRECTORY "/tmp/yaos/cmake-build-debug/_deps"
+    WORKING_DIRECTORY "/tmp/yaosopt/cmake-build-debug/_deps"
     RESULT_VARIABLE error_code
     )
   math(EXPR number_of_tries "${number_of_tries} + 1")
@@ -33,7 +33,7 @@ endif()
 
 execute_process(
   COMMAND "/usr/bin/git"  checkout 932a2ca50666138256dae56fbb16db3b1cae133a --
-  WORKING_DIRECTORY "/tmp/yaos/cmake-build-debug/_deps/doctest-src"
+  WORKING_DIRECTORY "/tmp/yaosopt/cmake-build-debug/_deps/doctest-src"
   RESULT_VARIABLE error_code
   )
 if(error_code)
@@ -44,23 +44,23 @@ set(init_submodules TRUE)
 if(init_submodules)
   execute_process(
     COMMAND "/usr/bin/git"  submodule update --recursive --init 
-    WORKING_DIRECTORY "/tmp/yaos/cmake-build-debug/_deps/doctest-src"
+    WORKING_DIRECTORY "/tmp/yaosopt/cmake-build-debug/_deps/doctest-src"
     RESULT_VARIABLE error_code
     )
 endif()
 if(error_code)
-  message(FATAL_ERROR "Failed to update submodules in: '/tmp/yaos/cmake-build-debug/_deps/doctest-src'")
+  message(FATAL_ERROR "Failed to update submodules in: '/tmp/yaosopt/cmake-build-debug/_deps/doctest-src'")
 endif()
 
 # Complete success, update the script-last-run stamp file:
 #
 execute_process(
   COMMAND ${CMAKE_COMMAND} -E copy
-    "/tmp/yaos/cmake-build-debug/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitinfo.txt"
-    "/tmp/yaos/cmake-build-debug/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitclone-lastrun.txt"
+    "/tmp/yaosopt/cmake-build-debug/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitinfo.txt"
+    "/tmp/yaosopt/cmake-build-debug/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitclone-lastrun.txt"
   RESULT_VARIABLE error_code
   )
 if(error_code)
-  message(FATAL_ERROR "Failed to copy script-last-run stamp file: '/tmp/yaos/cmake-build-debug/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitclone-lastrun.txt'")
+  message(FATAL_ERROR "Failed to copy script-last-run stamp file: '/tmp/yaosopt/cmake-build-debug/_deps/doctest-subbuild/doctest-populate-prefix/src/doctest-populate-stamp/doctest-populate-gitclone-lastrun.txt'")
 endif()
 

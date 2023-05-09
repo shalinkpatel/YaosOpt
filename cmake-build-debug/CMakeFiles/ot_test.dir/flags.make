@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++2a
 
 CXX_DEFINES = -DENABLE_DOCTEST_IN_LIBRARY
 
-CXX_INCLUDES = -I/tmp/yaos/include-shared -I/tmp/yaos/include 
+CXX_INCLUDES = -I/tmp/yaosopt/include-shared -I/tmp/yaosopt/include 
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/yaos
+CMAKE_SOURCE_DIR = /tmp/yaosopt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/yaos/cmake-build-debug
+CMAKE_BINARY_DIR = /tmp/yaosopt/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/yaos_app_lib.dir/depend.make
@@ -59,81 +59,81 @@ include CMakeFiles/yaos_app_lib.dir/flags.make
 
 CMakeFiles/yaos_app_lib.dir/src/pkg/garbler.cxx.o: CMakeFiles/yaos_app_lib.dir/flags.make
 CMakeFiles/yaos_app_lib.dir/src/pkg/garbler.cxx.o: ../src/pkg/garbler.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/yaos/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/yaos_app_lib.dir/src/pkg/garbler.cxx.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yaos_app_lib.dir/src/pkg/garbler.cxx.o -c /tmp/yaos/src/pkg/garbler.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/yaosopt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/yaos_app_lib.dir/src/pkg/garbler.cxx.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yaos_app_lib.dir/src/pkg/garbler.cxx.o -c /tmp/yaosopt/src/pkg/garbler.cxx
 
 CMakeFiles/yaos_app_lib.dir/src/pkg/garbler.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yaos_app_lib.dir/src/pkg/garbler.cxx.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/yaos/src/pkg/garbler.cxx > CMakeFiles/yaos_app_lib.dir/src/pkg/garbler.cxx.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/yaosopt/src/pkg/garbler.cxx > CMakeFiles/yaos_app_lib.dir/src/pkg/garbler.cxx.i
 
 CMakeFiles/yaos_app_lib.dir/src/pkg/garbler.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yaos_app_lib.dir/src/pkg/garbler.cxx.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/yaos/src/pkg/garbler.cxx -o CMakeFiles/yaos_app_lib.dir/src/pkg/garbler.cxx.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/yaosopt/src/pkg/garbler.cxx -o CMakeFiles/yaos_app_lib.dir/src/pkg/garbler.cxx.s
 
 CMakeFiles/yaos_app_lib.dir/src/pkg/evaluator.cxx.o: CMakeFiles/yaos_app_lib.dir/flags.make
 CMakeFiles/yaos_app_lib.dir/src/pkg/evaluator.cxx.o: ../src/pkg/evaluator.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/yaos/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/yaos_app_lib.dir/src/pkg/evaluator.cxx.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yaos_app_lib.dir/src/pkg/evaluator.cxx.o -c /tmp/yaos/src/pkg/evaluator.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/yaosopt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/yaos_app_lib.dir/src/pkg/evaluator.cxx.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yaos_app_lib.dir/src/pkg/evaluator.cxx.o -c /tmp/yaosopt/src/pkg/evaluator.cxx
 
 CMakeFiles/yaos_app_lib.dir/src/pkg/evaluator.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yaos_app_lib.dir/src/pkg/evaluator.cxx.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/yaos/src/pkg/evaluator.cxx > CMakeFiles/yaos_app_lib.dir/src/pkg/evaluator.cxx.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/yaosopt/src/pkg/evaluator.cxx > CMakeFiles/yaos_app_lib.dir/src/pkg/evaluator.cxx.i
 
 CMakeFiles/yaos_app_lib.dir/src/pkg/evaluator.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yaos_app_lib.dir/src/pkg/evaluator.cxx.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/yaos/src/pkg/evaluator.cxx -o CMakeFiles/yaos_app_lib.dir/src/pkg/evaluator.cxx.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/yaosopt/src/pkg/evaluator.cxx -o CMakeFiles/yaos_app_lib.dir/src/pkg/evaluator.cxx.s
 
 CMakeFiles/yaos_app_lib.dir/src/drivers/cli_driver.cxx.o: CMakeFiles/yaos_app_lib.dir/flags.make
 CMakeFiles/yaos_app_lib.dir/src/drivers/cli_driver.cxx.o: ../src/drivers/cli_driver.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/yaos/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/yaos_app_lib.dir/src/drivers/cli_driver.cxx.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yaos_app_lib.dir/src/drivers/cli_driver.cxx.o -c /tmp/yaos/src/drivers/cli_driver.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/yaosopt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/yaos_app_lib.dir/src/drivers/cli_driver.cxx.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yaos_app_lib.dir/src/drivers/cli_driver.cxx.o -c /tmp/yaosopt/src/drivers/cli_driver.cxx
 
 CMakeFiles/yaos_app_lib.dir/src/drivers/cli_driver.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yaos_app_lib.dir/src/drivers/cli_driver.cxx.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/yaos/src/drivers/cli_driver.cxx > CMakeFiles/yaos_app_lib.dir/src/drivers/cli_driver.cxx.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/yaosopt/src/drivers/cli_driver.cxx > CMakeFiles/yaos_app_lib.dir/src/drivers/cli_driver.cxx.i
 
 CMakeFiles/yaos_app_lib.dir/src/drivers/cli_driver.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yaos_app_lib.dir/src/drivers/cli_driver.cxx.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/yaos/src/drivers/cli_driver.cxx -o CMakeFiles/yaos_app_lib.dir/src/drivers/cli_driver.cxx.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/yaosopt/src/drivers/cli_driver.cxx -o CMakeFiles/yaos_app_lib.dir/src/drivers/cli_driver.cxx.s
 
 CMakeFiles/yaos_app_lib.dir/src/drivers/crypto_driver.cxx.o: CMakeFiles/yaos_app_lib.dir/flags.make
 CMakeFiles/yaos_app_lib.dir/src/drivers/crypto_driver.cxx.o: ../src/drivers/crypto_driver.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/yaos/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/yaos_app_lib.dir/src/drivers/crypto_driver.cxx.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yaos_app_lib.dir/src/drivers/crypto_driver.cxx.o -c /tmp/yaos/src/drivers/crypto_driver.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/yaosopt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/yaos_app_lib.dir/src/drivers/crypto_driver.cxx.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yaos_app_lib.dir/src/drivers/crypto_driver.cxx.o -c /tmp/yaosopt/src/drivers/crypto_driver.cxx
 
 CMakeFiles/yaos_app_lib.dir/src/drivers/crypto_driver.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yaos_app_lib.dir/src/drivers/crypto_driver.cxx.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/yaos/src/drivers/crypto_driver.cxx > CMakeFiles/yaos_app_lib.dir/src/drivers/crypto_driver.cxx.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/yaosopt/src/drivers/crypto_driver.cxx > CMakeFiles/yaos_app_lib.dir/src/drivers/crypto_driver.cxx.i
 
 CMakeFiles/yaos_app_lib.dir/src/drivers/crypto_driver.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yaos_app_lib.dir/src/drivers/crypto_driver.cxx.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/yaos/src/drivers/crypto_driver.cxx -o CMakeFiles/yaos_app_lib.dir/src/drivers/crypto_driver.cxx.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/yaosopt/src/drivers/crypto_driver.cxx -o CMakeFiles/yaos_app_lib.dir/src/drivers/crypto_driver.cxx.s
 
 CMakeFiles/yaos_app_lib.dir/src/drivers/network_driver.cxx.o: CMakeFiles/yaos_app_lib.dir/flags.make
 CMakeFiles/yaos_app_lib.dir/src/drivers/network_driver.cxx.o: ../src/drivers/network_driver.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/yaos/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/yaos_app_lib.dir/src/drivers/network_driver.cxx.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yaos_app_lib.dir/src/drivers/network_driver.cxx.o -c /tmp/yaos/src/drivers/network_driver.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/yaosopt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/yaos_app_lib.dir/src/drivers/network_driver.cxx.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yaos_app_lib.dir/src/drivers/network_driver.cxx.o -c /tmp/yaosopt/src/drivers/network_driver.cxx
 
 CMakeFiles/yaos_app_lib.dir/src/drivers/network_driver.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yaos_app_lib.dir/src/drivers/network_driver.cxx.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/yaos/src/drivers/network_driver.cxx > CMakeFiles/yaos_app_lib.dir/src/drivers/network_driver.cxx.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/yaosopt/src/drivers/network_driver.cxx > CMakeFiles/yaos_app_lib.dir/src/drivers/network_driver.cxx.i
 
 CMakeFiles/yaos_app_lib.dir/src/drivers/network_driver.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yaos_app_lib.dir/src/drivers/network_driver.cxx.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/yaos/src/drivers/network_driver.cxx -o CMakeFiles/yaos_app_lib.dir/src/drivers/network_driver.cxx.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/yaosopt/src/drivers/network_driver.cxx -o CMakeFiles/yaos_app_lib.dir/src/drivers/network_driver.cxx.s
 
 CMakeFiles/yaos_app_lib.dir/src/drivers/ot_driver.cxx.o: CMakeFiles/yaos_app_lib.dir/flags.make
 CMakeFiles/yaos_app_lib.dir/src/drivers/ot_driver.cxx.o: ../src/drivers/ot_driver.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/yaos/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/yaos_app_lib.dir/src/drivers/ot_driver.cxx.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yaos_app_lib.dir/src/drivers/ot_driver.cxx.o -c /tmp/yaos/src/drivers/ot_driver.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/yaosopt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/yaos_app_lib.dir/src/drivers/ot_driver.cxx.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yaos_app_lib.dir/src/drivers/ot_driver.cxx.o -c /tmp/yaosopt/src/drivers/ot_driver.cxx
 
 CMakeFiles/yaos_app_lib.dir/src/drivers/ot_driver.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yaos_app_lib.dir/src/drivers/ot_driver.cxx.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/yaos/src/drivers/ot_driver.cxx > CMakeFiles/yaos_app_lib.dir/src/drivers/ot_driver.cxx.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/yaosopt/src/drivers/ot_driver.cxx > CMakeFiles/yaos_app_lib.dir/src/drivers/ot_driver.cxx.i
 
 CMakeFiles/yaos_app_lib.dir/src/drivers/ot_driver.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yaos_app_lib.dir/src/drivers/ot_driver.cxx.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/yaos/src/drivers/ot_driver.cxx -o CMakeFiles/yaos_app_lib.dir/src/drivers/ot_driver.cxx.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/yaosopt/src/drivers/ot_driver.cxx -o CMakeFiles/yaos_app_lib.dir/src/drivers/ot_driver.cxx.s
 
 # Object files for target yaos_app_lib
 yaos_app_lib_OBJECTS = \
@@ -155,7 +155,7 @@ libyaos_app_lib.a: CMakeFiles/yaos_app_lib.dir/src/drivers/network_driver.cxx.o
 libyaos_app_lib.a: CMakeFiles/yaos_app_lib.dir/src/drivers/ot_driver.cxx.o
 libyaos_app_lib.a: CMakeFiles/yaos_app_lib.dir/build.make
 libyaos_app_lib.a: CMakeFiles/yaos_app_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/yaos/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libyaos_app_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/yaosopt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libyaos_app_lib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/yaos_app_lib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/yaos_app_lib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -169,6 +169,6 @@ CMakeFiles/yaos_app_lib.dir/clean:
 .PHONY : CMakeFiles/yaos_app_lib.dir/clean
 
 CMakeFiles/yaos_app_lib.dir/depend:
-	cd /tmp/yaos/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /tmp/yaos /tmp/yaos /tmp/yaos/cmake-build-debug /tmp/yaos/cmake-build-debug /tmp/yaos/cmake-build-debug/CMakeFiles/yaos_app_lib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /tmp/yaosopt/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /tmp/yaosopt /tmp/yaosopt /tmp/yaosopt/cmake-build-debug /tmp/yaosopt/cmake-build-debug /tmp/yaosopt/cmake-build-debug/CMakeFiles/yaos_app_lib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/yaos_app_lib.dir/depend
 

@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++11
 
 CXX_DEFINES = -DDOCTEST_CONFIG_IMPLEMENT_WITH_MAIN -DENABLE_DOCTEST_IN_LIBRARY
 
-CXX_INCLUDES = -I/tmp/yaos/cmake-build-debug/_deps/doctest-src 
+CXX_INCLUDES = -I/tmp/yaosopt/cmake-build-debug/_deps/doctest-src 
 

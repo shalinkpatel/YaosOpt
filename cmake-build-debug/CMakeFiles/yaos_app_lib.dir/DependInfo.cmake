@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/tmp/yaos/src/drivers/cli_driver.cxx" "/tmp/yaos/cmake-build-debug/CMakeFiles/yaos_app_lib.dir/src/drivers/cli_driver.cxx.o"
-  "/tmp/yaos/src/drivers/crypto_driver.cxx" "/tmp/yaos/cmake-build-debug/CMakeFiles/yaos_app_lib.dir/src/drivers/crypto_driver.cxx.o"
-  "/tmp/yaos/src/drivers/network_driver.cxx" "/tmp/yaos/cmake-build-debug/CMakeFiles/yaos_app_lib.dir/src/drivers/network_driver.cxx.o"
-  "/tmp/yaos/src/drivers/ot_driver.cxx" "/tmp/yaos/cmake-build-debug/CMakeFiles/yaos_app_lib.dir/src/drivers/ot_driver.cxx.o"
-  "/tmp/yaos/src/pkg/evaluator.cxx" "/tmp/yaos/cmake-build-debug/CMakeFiles/yaos_app_lib.dir/src/pkg/evaluator.cxx.o"
-  "/tmp/yaos/src/pkg/garbler.cxx" "/tmp/yaos/cmake-build-debug/CMakeFiles/yaos_app_lib.dir/src/pkg/garbler.cxx.o"
+  "/tmp/yaosopt/src/drivers/cli_driver.cxx" "/tmp/yaosopt/cmake-build-debug/CMakeFiles/yaos_app_lib.dir/src/drivers/cli_driver.cxx.o"
+  "/tmp/yaosopt/src/drivers/crypto_driver.cxx" "/tmp/yaosopt/cmake-build-debug/CMakeFiles/yaos_app_lib.dir/src/drivers/crypto_driver.cxx.o"
+  "/tmp/yaosopt/src/drivers/network_driver.cxx" "/tmp/yaosopt/cmake-build-debug/CMakeFiles/yaos_app_lib.dir/src/drivers/network_driver.cxx.o"
+  "/tmp/yaosopt/src/drivers/ot_driver.cxx" "/tmp/yaosopt/cmake-build-debug/CMakeFiles/yaos_app_lib.dir/src/drivers/ot_driver.cxx.o"
+  "/tmp/yaosopt/src/pkg/evaluator.cxx" "/tmp/yaosopt/cmake-build-debug/CMakeFiles/yaos_app_lib.dir/src/pkg/evaluator.cxx.o"
+  "/tmp/yaosopt/src/pkg/garbler.cxx" "/tmp/yaosopt/cmake-build-debug/CMakeFiles/yaos_app_lib.dir/src/pkg/garbler.cxx.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -27,7 +27,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/tmp/yaos/cmake-build-debug/CMakeFiles/yaos_app_lib_shared.dir/DependInfo.cmake"
+  "/tmp/yaosopt/cmake-build-debug/CMakeFiles/yaos_app_lib_shared.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

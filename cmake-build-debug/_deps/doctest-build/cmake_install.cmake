@@ -1,4 +1,4 @@
-# Install script for directory: /tmp/yaos/cmake-build-debug/_deps/doctest-src
+# Install script for directory: /tmp/yaosopt/cmake-build-debug/_deps/doctest-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,20 +38,20 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/doctest" TYPE FILE FILES "/tmp/yaos/cmake-build-debug/_deps/doctest-src/doctest/doctest.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/doctest" TYPE FILE FILES "/tmp/yaosopt/cmake-build-debug/_deps/doctest-src/doctest/doctest.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/doctest" TYPE FILE FILES
-    "/tmp/yaos/cmake-build-debug/_deps/doctest-build/generated/doctestConfig.cmake"
-    "/tmp/yaos/cmake-build-debug/_deps/doctest-build/generated/doctestConfigVersion.cmake"
+    "/tmp/yaosopt/cmake-build-debug/_deps/doctest-build/generated/doctestConfig.cmake"
+    "/tmp/yaosopt/cmake-build-debug/_deps/doctest-build/generated/doctestConfigVersion.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/doctest" TYPE FILE FILES
-    "/tmp/yaos/cmake-build-debug/_deps/doctest-src/scripts/cmake/doctest.cmake"
-    "/tmp/yaos/cmake-build-debug/_deps/doctest-src/scripts/cmake/doctestAddTests.cmake"
+    "/tmp/yaosopt/cmake-build-debug/_deps/doctest-src/scripts/cmake/doctest.cmake"
+    "/tmp/yaosopt/cmake-build-debug/_deps/doctest-src/scripts/cmake/doctestAddTests.cmake"
     )
 endif()
 
@@ -59,7 +59,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/doctest/doctestTargets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/doctest/doctestTargets.cmake"
-         "/tmp/yaos/cmake-build-debug/_deps/doctest-build/CMakeFiles/Export/lib/cmake/doctest/doctestTargets.cmake")
+         "/tmp/yaosopt/cmake-build-debug/_deps/doctest-build/CMakeFiles/Export/lib/cmake/doctest/doctestTargets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/doctest/doctestTargets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -68,6 +68,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/doctest" TYPE FILE FILES "/tmp/yaos/cmake-build-debug/_deps/doctest-build/CMakeFiles/Export/lib/cmake/doctest/doctestTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/doctest" TYPE FILE FILES "/tmp/yaosopt/cmake-build-debug/_deps/doctest-build/CMakeFiles/Export/lib/cmake/doctest/doctestTargets.cmake")
 endif()
 

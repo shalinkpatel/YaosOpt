@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/yaos
+CMAKE_SOURCE_DIR = /tmp/yaosopt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/yaos/cmake-build-debug
+CMAKE_BINARY_DIR = /tmp/yaosopt/cmake-build-debug
 
 # Utility rule file for ExperimentalSubmit.
 
@@ -71,6 +71,6 @@ CMakeFiles/ExperimentalSubmit.dir/clean:
 .PHONY : CMakeFiles/ExperimentalSubmit.dir/clean
 
 CMakeFiles/ExperimentalSubmit.dir/depend:
-	cd /tmp/yaos/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /tmp/yaos /tmp/yaos /tmp/yaos/cmake-build-debug /tmp/yaos/cmake-build-debug /tmp/yaos/cmake-build-debug/CMakeFiles/ExperimentalSubmit.dir/DependInfo.cmake --color=$(COLOR)
+	cd /tmp/yaosopt/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /tmp/yaosopt /tmp/yaosopt /tmp/yaosopt/cmake-build-debug /tmp/yaosopt/cmake-build-debug /tmp/yaosopt/cmake-build-debug/CMakeFiles/ExperimentalSubmit.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ExperimentalSubmit.dir/depend
 

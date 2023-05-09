@@ -1,4 +1,4 @@
-# Install script for directory: /tmp/yaos
+# Install script for directory: /tmp/yaosopt
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,8 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/tmp/yaos/cmake-build-debug/_deps/doctest-build/cmake_install.cmake")
-  include("/tmp/yaos/cmake-build-debug/test/cmake_install.cmake")
+  include("/tmp/yaosopt/cmake-build-debug/_deps/doctest-build/cmake_install.cmake")
+  include("/tmp/yaosopt/cmake-build-debug/test/cmake_install.cmake")
 
 endif()
 
@@ -52,5 +52,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/tmp/yaos/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/tmp/yaosopt/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

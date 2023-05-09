@@ -6,5 +6,5 @@ CXX_FLAGS = -g
 
 CXX_DEFINES = -DBOOST_ALL_NO_LIB -DENABLE_DOCTEST_IN_LIBRARY
 
-CXX_INCLUDES = -I/tmp/yaos/include-shared -I/tmp/yaos/cmake-build-debug/_deps/doctest-src 
+CXX_INCLUDES = -I/tmp/yaosopt/include-shared -I/tmp/yaosopt/cmake-build-debug/_deps/doctest-src 
 

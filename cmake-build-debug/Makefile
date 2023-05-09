@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/yaos
+CMAKE_SOURCE_DIR = /tmp/yaosopt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/yaos/cmake-build-debug
+CMAKE_BINARY_DIR = /tmp/yaosopt/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/yaos/cmake-build-debug/CMakeFiles /tmp/yaos/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/yaosopt/cmake-build-debug/CMakeFiles /tmp/yaosopt/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/yaos/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/yaosopt/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

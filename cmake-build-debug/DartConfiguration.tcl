@@ -4,14 +4,14 @@
 
 
 # Configuration directories and files
-SourceDirectory: /tmp/yaos
-BuildDirectory: /tmp/yaos/cmake-build-debug
+SourceDirectory: /tmp/yaosopt
+BuildDirectory: /tmp/yaosopt/cmake-build-debug
 
 # Where to place the cost data store
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: 1bb2676147ed
+Site: 358eda95cee0
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
 BuildName: Linux-c++
@@ -26,7 +26,7 @@ SubmitURL: http://
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/tmp/yaos"
+ConfigureCommand: "/usr/bin/cmake" "/tmp/yaosopt"
 MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 
