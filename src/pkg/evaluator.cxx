@@ -157,16 +157,14 @@ GarbledWire EvaluatorClient::evaluate_gate(GarbledGate gate, GarbledWire lhs,
                                         GarbledWire rhs) {
   // DONE: implement me!
   GarbledWire out;
-  for (auto entry : gate.entries) {
-    SecByteBlock hashed_val = this->crypto_driver->hash_inputs(lhs.value, rhs.value);
-    CryptoPP::xorbuf(hashed_val, entry, LABEL_LENGTH + LABEL_TAG_LENGTH);
-    if (verify_decryption(hashed_val)) {
-      SecByteBlock head = snip_decryption(hashed_val);
-      out.value = head;
-      return out;
-    }
-  }
-  out.value = string_to_byteblock("");
+  auto lhs_b = first_byte(lhs.value);
+  auto rhs_b = first_byte(rhs.value);
+  int idx = 2 * lhs_b + rhs_b;
+  auto entry = gate.entries[idx];
+  SecByteBlock hashed_val = this->crypto_driver->hash_inputs(lhs.value, rhs.value);
+  CryptoPP::xorbuf(hashed_val, entry, LABEL_LENGTH + LABEL_TAG_LENGTH);
+  SecByteBlock head = snip_decryption(hashed_val);
+  out.value = head;
   return out;
 }
 
