@@ -134,8 +134,8 @@ std::vector<GarbledGate> GarblerClient::generate_gates(Circuit circuit,
 
     auto w_left_0 = labels.zeros.at(gate.lhs);
     auto w_left_1 = labels.ones.at(gate.lhs);
-    auto w_right_0 = labels.zeros.at(gate.lhs);
-    auto w_right_1 = labels.ones.at(gate.lhs);
+    auto w_right_0 = labels.zeros.at(gate.rhs);
+    auto w_right_1 = labels.ones.at(gate.rhs);
 
     byte p_left_0 = first_byte(w_left_0.value);
     byte p_left_1 = first_byte(w_left_1.value);
