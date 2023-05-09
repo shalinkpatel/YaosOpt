@@ -40,3 +40,5 @@ std::vector<std::string> string_split(std::string str, char delimiter);
 
 // Input parser.
 std::vector<int> parse_input(std::string input_file);
+
+byte first_byte(CryptoPP::SecBlock<byte> label);

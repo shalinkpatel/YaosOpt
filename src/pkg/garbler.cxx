@@ -130,39 +130,52 @@ std::vector<GarbledGate> GarblerClient::generate_gates(Circuit circuit,
   // DONE: implement me!
   std::vector<GarbledGate> gates;
   for (auto gate : circuit.gates) {
-    std::vector<CryptoPP::SecByteBlock> entries;
-    if (gate.type == GateType::AND_GATE) {
-      entries.push_back(encrypt_label(
-          labels.zeros.at(gate.lhs), labels.zeros.at(gate.rhs), labels.zeros.at(gate.output)));
-      entries.push_back(encrypt_label(
-          labels.zeros.at(gate.lhs), labels.ones.at(gate.rhs), labels.zeros.at(gate.output)));
-      entries.push_back(encrypt_label(
-          labels.ones.at(gate.lhs), labels.zeros.at(gate.rhs), labels.zeros.at(gate.output)));
-      entries.push_back(encrypt_label(
-          labels.ones.at(gate.lhs), labels.ones.at(gate.rhs), labels.ones.at(gate.output)));
-    } else if (gate.type == GateType::XOR_GATE) {
-      entries.push_back(encrypt_label(
-          labels.zeros.at(gate.lhs), labels.zeros.at(gate.rhs), labels.zeros.at(gate.output)));
-      entries.push_back(encrypt_label(
-          labels.zeros.at(gate.lhs), labels.ones.at(gate.rhs), labels.ones.at(gate.output)));
-      entries.push_back(encrypt_label(
-          labels.ones.at(gate.lhs), labels.zeros.at(gate.rhs), labels.ones.at(gate.output)));
-      entries.push_back(encrypt_label(
-          labels.ones.at(gate.lhs), labels.ones.at(gate.rhs), labels.zeros.at(gate.output)));
-    } else { // NOT_GATE
+    std::vector<CryptoPP::SecByteBlock> entries(4);
+
+    auto w_left_0 = labels.zeros.at(gate.lhs);
+    auto w_left_1 = labels.ones.at(gate.lhs);
+    auto w_right_0 = labels.zeros.at(gate.lhs);
+    auto w_right_1 = labels.ones.at(gate.lhs);
+
+    byte p_left_0 = first_byte(w_left_0.value);
+    byte p_left_1 = first_byte(w_left_1.value);
+    byte p_right_0 = first_byte(w_right_0.value);
+    byte p_right_1 = first_byte(w_right_1.value);
+
+    if (gate.type == GateType::NOT_GATE) {
       GarbledWire dummy_wire;
       dummy_wire.value = DUMMY_RHS;
-      entries.push_back(encrypt_label(
-          labels.zeros.at(gate.lhs), dummy_wire, labels.ones.at(gate.output)));
-      entries.push_back(encrypt_label(
-          labels.zeros.at(gate.lhs), dummy_wire, labels.ones.at(gate.output)));
-      entries.push_back(encrypt_label(
-          labels.ones.at(gate.lhs), dummy_wire, labels.zeros.at(gate.output)));
-      entries.push_back(encrypt_label(
-          labels.ones.at(gate.lhs), dummy_wire, labels.zeros.at(gate.output)));
+
+      w_right_0 = dummy_wire;
+      w_right_1 = dummy_wire;
+
+      p_right_0 = first_byte(DUMMY_RHS);
+      p_right_1 = (p_right_0 + 1) % 2;
     }
-    // shuffle entries
-    std::random_shuffle(entries.begin(), entries.end());
+
+    // No longer randomly shuffle, look at the last bit of each label to calculate where to put the correct encryption.
+    // 2p_i + p_j th spot
+    int index_0_0 = 2 * p_left_0 + p_right_0;
+    int index_0_1 = 2 * p_left_0 + p_right_1;
+    int index_1_0 = 2 * p_left_1 + p_right_0;
+    int index_1_1 = 2 * p_left_1 + p_right_1;
+
+    if (gate.type == GateType::AND_GATE) {
+      entries[index_0_0] = encrypt_label(w_left_0, w_right_0, labels.zeros.at(gate.output));
+      entries[index_0_1] = encrypt_label(w_left_0, w_right_1, labels.zeros.at(gate.output));
+      entries[index_1_0] = encrypt_label(w_left_1, w_right_0, labels.zeros.at(gate.output));
+      entries[index_1_1] = encrypt_label(w_left_1, w_right_1, labels.ones.at(gate.output));
+    } else if (gate.type == GateType::XOR_GATE) {
+      entries[index_0_0] = encrypt_label(w_left_0, w_right_0, labels.zeros.at(gate.output));
+      entries[index_0_1] = encrypt_label(w_left_0, w_right_1, labels.ones.at(gate.output));
+      entries[index_1_0] = encrypt_label(w_left_1, w_right_0, labels.ones.at(gate.output));
+      entries[index_1_1] = encrypt_label(w_left_1, w_right_1, labels.zeros.at(gate.output));
+    } else { // NOT_GATE
+      entries[index_0_0] = encrypt_label(w_left_0, w_right_0, labels.ones.at(gate.output));
+      entries[index_0_1] = encrypt_label(w_left_0, w_right_1, labels.ones.at(gate.output));
+      entries[index_1_0] = encrypt_label(w_left_1, w_right_0, labels.zeros.at(gate.output));
+      entries[index_1_1] = encrypt_label(w_left_1, w_right_1, labels.zeros.at(gate.output));
+    }
     GarbledGate garbledGate;
     garbledGate.entries = entries;
     gates.push_back(garbledGate);
