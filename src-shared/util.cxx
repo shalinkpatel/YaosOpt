@@ -69,10 +69,7 @@ CryptoPP::SecByteBlock string_to_byteblock(const std::string &s) {
 }
 
 bool random_bit() {
-  CryptoPP::SecByteBlock rng(1);
-
-  CryptoPP::OS_GenerateRandomBlock(false, rng, rng.size());
-  return (byteblock_to_integer(rng) % 2) == 0;
+  return (std::rand() % 2) == 0;
 }
 
 /**

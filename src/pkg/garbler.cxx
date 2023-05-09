@@ -181,8 +181,6 @@ GarbledLabels GarblerClient::generate_labels(Circuit circuit) {
   output_labels.zeros.resize(circuit.num_wire);
   output_labels.ones.resize(circuit.num_wire);
   for (auto gate : circuit.gates) {
-    CryptoPP::SecByteBlock rng(1);
-
     bool bit = random_bit();
     GarbledWire lhs0;
     lhs0.value = generate_label((byte) bit);
