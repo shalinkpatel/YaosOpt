@@ -149,7 +149,7 @@ std::vector<GarbledGate> GarblerClient::generate_gates(Circuit circuit,
       w_right_0 = dummy_wire;
       w_right_1 = dummy_wire;
 
-      p_right_0 = first_byte(DUMMY_RHS);
+      p_right_0 = first_byte(DUMMY_RHS) % 2;
       p_right_1 = (p_right_0 + 1) % 2;
     }
 
