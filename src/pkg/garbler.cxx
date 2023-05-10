@@ -169,10 +169,10 @@ std::vector<GarbledGate> GarblerClient::generate_gates(Circuit circuit,
       entries[index_1_0] = encrypt_label(w_left_1, w_right_0, labels.zeros.at(gate.output));
       entries[index_1_1] = encrypt_label(w_left_1, w_right_1, labels.ones.at(gate.output));
     } else if (gate.type == GateType::XOR_GATE) {
-      entries[index_0_0] = encrypt_label(w_left_0, w_right_0, labels.zeros.at(gate.output));
-      entries[index_0_1] = encrypt_label(w_left_0, w_right_1, labels.ones.at(gate.output));
-      entries[index_1_0] = encrypt_label(w_left_1, w_right_0, labels.ones.at(gate.output));
-      entries[index_1_1] = encrypt_label(w_left_1, w_right_1, labels.zeros.at(gate.output));
+      // entries[index_0_0] = encrypt_label(w_left_0, w_right_0, labels.zeros.at(gate.output));
+      // entries[index_0_1] = encrypt_label(w_left_0, w_right_1, labels.ones.at(gate.output));
+      // entries[index_1_0] = encrypt_label(w_left_1, w_right_0, labels.ones.at(gate.output));
+      // entries[index_1_1] = encrypt_label(w_left_1, w_right_1, labels.zeros.at(gate.output));
     } else { // NOT_GATE
       entries[index_0_0] = encrypt_label(w_left_0, w_right_0, labels.ones.at(gate.output));
       entries[index_0_1] = encrypt_label(w_left_0, w_right_1, labels.ones.at(gate.output));
