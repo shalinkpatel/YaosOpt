@@ -124,6 +124,7 @@ std::string EvaluatorClient::run(std::vector<int> input) {
     } else if (gate.type == GateType::XOR_GATE) {
       wire.value = SecByteBlock(garbled_wires.at(gate.lhs).value);
       CryptoPP::xorbuf(wire.value, garbled_wires.at(gate.rhs).value, LABEL_LENGTH);
+      wire.value.BytePtr()[0] = first_byte(wire.value);
     } else {
       wire = this->evaluate_gate(
           garbled_gates.at(i), garbled_wires.at(gate.lhs), garbled_wires.at(gate.rhs));
