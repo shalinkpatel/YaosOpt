@@ -8,5 +8,5 @@ with open('test-cases.csv', 'w', newline='') as f:
     w.writerow(['case', 'output'])
     for c in circuits:
         print(f"{bcolors.OKGREEN}Running Circuit{bcolors.ENDC}: {bcolors.OKBLUE}{c}{bcolors.ENDC}")
-        res = run_circuit(c, '..')
+        res = run_circuit(c, '..', 'baseline')
         w.writerow([c, res.output])

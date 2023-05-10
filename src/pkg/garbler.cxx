@@ -267,10 +267,10 @@ GarbledLabels GarblerClient::generate_labels(Circuit circuit) {
     if (gate.type != GateType::NOT_GATE) {
       output_labels.zeros.at(gate.rhs) = rhs[0];
       output_labels.ones.at(gate.rhs) = rhs[1];
+      idx_already_set.insert(gate.rhs);
     }
 
     idx_already_set.insert(gate.lhs);
-    idx_already_set.insert(gate.rhs);
     idx_already_set.insert(gate.output);
   }
 

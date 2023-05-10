@@ -4,7 +4,7 @@ import sys
 
 
 bench_name = sys.argv[1]
-TRIES = 50
+TRIES = 20
 circuits = get_valid_ciruits('..')
 
 with open(f'{bench_name}-bench.csv', 'w', newline='') as f:
@@ -14,7 +14,7 @@ with open(f'{bench_name}-bench.csv', 'w', newline='') as f:
         print(f"{bcolors.OKGREEN}Benchmarking Circuit{bcolors.ENDC}: {bcolors.OKBLUE}{c}{bcolors.ENDC} {bcolors.WARNING}", end='', flush=True)
         timings = []
         for _ in range(TRIES):
-            res = run_circuit(c, '..')
+            res = run_circuit(c, '..', bench_name)
             timings.append(res.time)
             print('.',  end='', flush=True)
         print(bcolors.ENDC, end='')

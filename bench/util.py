@@ -29,11 +29,11 @@ def get_valid_ciruits(folder: str) -> List[str]:
     return list(map(lambda c: c.split('/')[-1].split('.')[0], cs))
 
 
-def run_circuit(cname: str, folder: str) -> CircuitResult:
-    garbler = Popen(f"{folder}/build/yaos_garbler {folder}/circuits/{cname}.txt {folder}/circuits/{cname}-input-1.txt localhost 8000", shell=True)
+def run_circuit(cname: str, folder: str, vers: str) -> CircuitResult:
+    garbler = Popen(f"{folder}/archive/yaos_garbler_{vers} {folder}/circuits/{cname}.txt {folder}/circuits/{cname}-input-1.txt localhost 8000", shell=True)
     time.sleep(0.1)
     t = time.time()
-    evaluator = run(f"{folder}/build/yaos_evaluator {folder}/circuits/{cname}.txt {folder}/circuits/{cname}-input-2.txt localhost 8000", capture_output=True, text=True, shell=True)
+    evaluator = run(f"{folder}/archive/yaos_evaluator_{vers} {folder}/circuits/{cname}.txt {folder}/circuits/{cname}-input-2.txt localhost 8000", capture_output=True, text=True, shell=True)
     t = time.time() - t
     garbler.poll()
     return CircuitResult(evaluator.stdout.strip(), t)
