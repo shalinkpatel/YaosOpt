@@ -137,10 +137,10 @@ std::vector<GarbledGate> GarblerClient::generate_gates(Circuit circuit,
     auto w_right_0 = labels.zeros.at(gate.rhs);
     auto w_right_1 = labels.ones.at(gate.rhs);
 
-    byte p_left_0 = first_byte(w_left_0.value);
-    byte p_left_1 = first_byte(w_left_1.value);
-    byte p_right_0 = first_byte(w_right_0.value);
-    byte p_right_1 = first_byte(w_right_1.value);
+    byte p_left_0 = first_bit(w_left_0.value);
+    byte p_left_1 = first_bit(w_left_1.value);
+    byte p_right_0 = first_bit(w_right_0.value);
+    byte p_right_1 = first_bit(w_right_1.value);
 
     if (gate.type == GateType::NOT_GATE) {
       GarbledWire dummy_wire;
@@ -149,7 +149,7 @@ std::vector<GarbledGate> GarblerClient::generate_gates(Circuit circuit,
       w_right_0 = dummy_wire;
       w_right_1 = dummy_wire;
 
-      p_right_0 = first_byte(DUMMY_RHS) % 2;
+      p_right_0 = first_bit(DUMMY_RHS);
       p_right_1 = p_right_0;
     }
 
@@ -202,7 +202,6 @@ GarbledLabels GarblerClient::generate_labels(Circuit circuit) {
     GarbledWire lhs1;
     lhs1.value = CryptoPP::SecByteBlock(lhs0.value);
     CryptoPP::xorbuf(lhs1.value, r, LABEL_LENGTH);
-    lhs1.value.BytePtr()[0] = first_byte(lhs1.value);
 
     bit = random_bit();
     GarbledWire rhs0;
@@ -210,7 +209,6 @@ GarbledLabels GarblerClient::generate_labels(Circuit circuit) {
     GarbledWire rhs1;
     rhs1.value = CryptoPP::SecByteBlock(rhs0.value);
     CryptoPP::xorbuf(rhs1.value, r, LABEL_LENGTH);
-    rhs1.value.BytePtr()[0] = first_byte(rhs1.value);
 
     bit = random_bit();
     GarbledWire out0;
@@ -218,13 +216,11 @@ GarbledLabels GarblerClient::generate_labels(Circuit circuit) {
     if (gate.type == GateType::XOR_GATE) {
       out0.value = CryptoPP::SecByteBlock(lhs0.value);
       CryptoPP::xorbuf(out0.value, rhs0.value, LABEL_LENGTH);
-      out0.value.BytePtr()[0] = first_byte(out0.value);
     } else {
       out0.value = generate_label((byte) bit);
     }
     out1.value = CryptoPP::SecByteBlock(out0.value);
     CryptoPP::xorbuf(out1.value, r, LABEL_LENGTH);
-    out1.value.BytePtr()[0] = first_byte(out1.value);
 
     output_labels.zeros.at(gate.lhs) = lhs0; output_labels.zeros.at(gate.rhs) = rhs0; output_labels.zeros.at(gate.output) = out0;
     output_labels.ones.at(gate.lhs) = lhs1; output_labels.ones.at(gate.rhs) = rhs1; output_labels.ones.at(gate.output) = out1;
@@ -255,7 +251,7 @@ CryptoPP::SecByteBlock GarblerClient::encrypt_label(GarbledWire lhs,
 CryptoPP::SecByteBlock GarblerClient::generate_label(byte select_bit) {
   CryptoPP::SecByteBlock label(LABEL_LENGTH);
   CryptoPP::OS_GenerateRandomBlock(false, label, label.size());
-  label.BytePtr()[0] = select_bit;
+  label.BytePtr()[0] |= (select_bit << 7);
   return label;
 }
 

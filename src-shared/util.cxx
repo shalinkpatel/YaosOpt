@@ -141,8 +141,8 @@ std::vector<int> parse_input(std::string input_file) {
 }
 
 /*
- * Return the first byte of a SecByteBlock
+ * Return the first bit of a SecByteBlock
  * */
-byte first_byte(CryptoPP::SecBlock<byte> label) {
-  return label.BytePtr()[0] % 2;
+byte first_bit(CryptoPP::SecBlock<byte> label) {
+  return (label.BytePtr()[0] >> 7) & 1;
 }

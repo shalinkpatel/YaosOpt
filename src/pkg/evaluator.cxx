@@ -124,7 +124,6 @@ std::string EvaluatorClient::run(std::vector<int> input) {
     } else if (gate.type == GateType::XOR_GATE) {
       wire.value = SecByteBlock(garbled_wires.at(gate.lhs).value);
       CryptoPP::xorbuf(wire.value, garbled_wires.at(gate.rhs).value, LABEL_LENGTH);
-      wire.value.BytePtr()[0] = first_byte(wire.value);
     } else {
       wire = this->evaluate_gate(
           garbled_gates.at(i), garbled_wires.at(gate.lhs), garbled_wires.at(gate.rhs));
@@ -161,8 +160,8 @@ GarbledWire EvaluatorClient::evaluate_gate(GarbledGate gate, GarbledWire lhs,
                                         GarbledWire rhs) {
   // DONE: implement me!
   GarbledWire out;
-  auto lhs_b = first_byte(lhs.value);
-  auto rhs_b = first_byte(rhs.value);
+  auto lhs_b = first_bit(lhs.value);
+  auto rhs_b = first_bit(rhs.value);
   int idx = 2 * lhs_b + rhs_b;
   auto entry = gate.entries[idx];
   SecByteBlock hashed_val = this->crypto_driver->hash_inputs(lhs.value, rhs.value);
