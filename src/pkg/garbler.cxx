@@ -236,6 +236,7 @@ GarbledLabels GarblerClient::generate_labels(Circuit circuit) {
     output_labels.ones.at(gate.lhs) = lhs1; output_labels.ones.at(gate.rhs) = rhs1; output_labels.ones.at(gate.output) = out1;
     idx_already_set.insert(gate.lhs);
     idx_already_set.insert(gate.rhs);
+    idx_already_set.insert(gate.output);
   }
 
   return output_labels;
