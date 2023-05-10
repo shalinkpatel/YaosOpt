@@ -256,7 +256,7 @@ GarbledLabels GarblerClient::generate_labels(Circuit circuit) {
           out1.value = CryptoPP::SecByteBlock(out0.value);
           CryptoPP::xorbuf(out1.value, r, LABEL_LENGTH);
         }
-      } else { // XOR_GATE
+      } else { // NOT_GATE
         if (!lhs_for_idx_0) {
           out1.value = this->crypto_driver->hash_inputs(lhs[lhs_for_idx_0].value, rhs[rhs_for_idx_0].value);
           out0.value = CryptoPP::SecByteBlock(out1.value);
