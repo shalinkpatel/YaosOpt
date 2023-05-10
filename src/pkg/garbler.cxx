@@ -168,6 +168,8 @@ std::vector<GarbledGate> GarblerClient::generate_gates(Circuit circuit,
       entries[index_0_1] = encrypt_label(w_left_0, w_right_1, labels.zeros.at(gate.output));
       entries[index_1_0] = encrypt_label(w_left_1, w_right_0, labels.zeros.at(gate.output));
       entries[index_1_1] = encrypt_label(w_left_1, w_right_1, labels.ones.at(gate.output));
+
+      entries.erase(entries.begin());
     } else if (gate.type == GateType::XOR_GATE) {
       // entries[index_0_0] = encrypt_label(w_left_0, w_right_0, labels.zeros.at(gate.output));
       // entries[index_0_1] = encrypt_label(w_left_0, w_right_1, labels.ones.at(gate.output));
@@ -178,6 +180,8 @@ std::vector<GarbledGate> GarblerClient::generate_gates(Circuit circuit,
       entries[index_0_1] = encrypt_label(w_left_0, w_right_1, labels.ones.at(gate.output));
       entries[index_1_0] = encrypt_label(w_left_1, w_right_0, labels.zeros.at(gate.output));
       entries[index_1_1] = encrypt_label(w_left_1, w_right_1, labels.zeros.at(gate.output));
+
+      entries.erase(entries.begin());
     }
     GarbledGate garbledGate;
     garbledGate.entries = entries;
@@ -202,38 +206,71 @@ GarbledLabels GarblerClient::generate_labels(Circuit circuit) {
   auto r = generate_label(1);
   for (auto gate : circuit.gates) {
     bool bit;
-    GarbledWire lhs0 = output_labels.zeros.at(gate.lhs);
-    GarbledWire lhs1 = output_labels.ones.at(gate.lhs);
+    std::vector<GarbledWire> lhs = {output_labels.zeros.at(gate.lhs), output_labels.ones.at(gate.lhs)};
     if (idx_already_set.find(gate.lhs) == idx_already_set.end()) {
       bit = random_bit();
-      lhs0.value = generate_label((byte) bit);
-      lhs1.value = CryptoPP::SecByteBlock(lhs0.value);
-      CryptoPP::xorbuf(lhs1.value, r, LABEL_LENGTH);
+      lhs[0].value = generate_label((byte) bit);
+      lhs[1].value = CryptoPP::SecByteBlock(lhs[0].value);
+      CryptoPP::xorbuf(lhs[1].value, r, LABEL_LENGTH);
     }
 
-    GarbledWire rhs0 = output_labels.zeros.at(gate.rhs);
-    GarbledWire rhs1 = output_labels.ones.at(gate.rhs);
+    std::vector<GarbledWire> rhs = {output_labels.zeros.at(gate.rhs), output_labels.ones.at(gate.rhs)};
     if (idx_already_set.find(gate.rhs) == idx_already_set.end()) {
       bit = random_bit();
-      rhs0.value = generate_label((byte) bit);
-      rhs1.value = CryptoPP::SecByteBlock(rhs0.value);
-      CryptoPP::xorbuf(rhs1.value, r, LABEL_LENGTH);
+      rhs[0].value = generate_label((byte) bit);
+      rhs[1].value = CryptoPP::SecByteBlock(rhs[0].value);
+      CryptoPP::xorbuf(rhs[1].value, r, LABEL_LENGTH);
     }
 
     bit = random_bit();
     GarbledWire out0;
     GarbledWire out1;
     if (gate.type == GateType::XOR_GATE) {
-      out0.value = CryptoPP::SecByteBlock(lhs0.value);
-      CryptoPP::xorbuf(out0.value, rhs0.value, LABEL_LENGTH);
-    } else {
-      out0.value = generate_label((byte) bit);
-    }
-    out1.value = CryptoPP::SecByteBlock(out0.value);
-    CryptoPP::xorbuf(out1.value, r, LABEL_LENGTH);
+      out0.value = CryptoPP::SecByteBlock(lhs[0].value);
+      CryptoPP::xorbuf(out0.value, rhs[0].value, LABEL_LENGTH);
 
-    output_labels.zeros.at(gate.lhs) = lhs0; output_labels.zeros.at(gate.rhs) = rhs0; output_labels.zeros.at(gate.output) = out0;
-    output_labels.ones.at(gate.lhs) = lhs1; output_labels.ones.at(gate.rhs) = rhs1; output_labels.ones.at(gate.output) = out1;
+      out1.value = CryptoPP::SecByteBlock(out0.value);
+      CryptoPP::xorbuf(out1.value, r, LABEL_LENGTH);
+    } else {
+      int lhs_for_idx_0;
+      int rhs_for_idx_0;
+
+      if (first_bit(lhs[0].value)) {
+        lhs_for_idx_0 = 1;
+      } else {
+        lhs_for_idx_0 = 0;
+      }
+      if (first_bit(rhs[0].value)) {
+        rhs_for_idx_0 = 1;
+      } else {
+        rhs_for_idx_0 = 0;
+      }
+
+      if (gate.type == GateType::AND_GATE) {
+        if (lhs_for_idx_0 && rhs_for_idx_0) {
+          out1.value = this->crypto_driver->hash_inputs(lhs[1].value, rhs[1].value);
+          out0.value = CryptoPP::SecByteBlock(out1.value);
+          CryptoPP::xorbuf(out0.value, r, LABEL_LENGTH);
+        } else {
+          out0.value = this->crypto_driver->hash_inputs(lhs[lhs_for_idx_0].value, rhs[rhs_for_idx_0].value);
+          out1.value = CryptoPP::SecByteBlock(out0.value);
+          CryptoPP::xorbuf(out1.value, r, LABEL_LENGTH);
+        }
+      } else { // XOR_GATE
+        if (!lhs_for_idx_0) {
+          out1.value = this->crypto_driver->hash_inputs(lhs[lhs_for_idx_0].value, rhs[rhs_for_idx_0].value);
+          out0.value = CryptoPP::SecByteBlock(out1.value);
+          CryptoPP::xorbuf(out0.value, r, LABEL_LENGTH);
+        } else {
+          out0.value = this->crypto_driver->hash_inputs(lhs[lhs_for_idx_0].value, rhs[rhs_for_idx_0].value);
+          out1.value = CryptoPP::SecByteBlock(out0.value);
+          CryptoPP::xorbuf(out1.value, r, LABEL_LENGTH);
+        }
+      }
+    }
+
+    output_labels.zeros.at(gate.lhs) = lhs[0]; output_labels.zeros.at(gate.rhs) = rhs[0]; output_labels.zeros.at(gate.output) = out0;
+    output_labels.ones.at(gate.lhs) = lhs[1]; output_labels.ones.at(gate.rhs) = rhs[1]; output_labels.ones.at(gate.output) = out1;
     idx_already_set.insert(gate.lhs);
     idx_already_set.insert(gate.rhs);
     idx_already_set.insert(gate.output);

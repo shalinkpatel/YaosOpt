@@ -4,8 +4,10 @@
 #include <crypto++/integer.h>
 #include <crypto++/secblock.h>
 
-#define LABEL_LENGTH 16     /* 128 bits */
-#define LABEL_TAG_LENGTH 16 /* 128 bits */
+//#define LABEL_LENGTH 16     /* 128 bits */
+//#define LABEL_TAG_LENGTH 16 /* 128 bits */
+#define LABEL_LENGTH 32     /* 256 bits */
+#define LABEL_TAG_LENGTH 0 /* 0 bits */
 
 #define EG_KEYSIZE 1024
 

@@ -162,12 +162,18 @@ GarbledWire EvaluatorClient::evaluate_gate(GarbledGate gate, GarbledWire lhs,
   GarbledWire out;
   auto lhs_b = first_bit(lhs.value);
   auto rhs_b = first_bit(rhs.value);
-  int idx = 2 * lhs_b + rhs_b;
-  auto entry = gate.entries[idx];
+
   SecByteBlock hashed_val = this->crypto_driver->hash_inputs(lhs.value, rhs.value);
-  CryptoPP::xorbuf(hashed_val, entry, LABEL_LENGTH + LABEL_TAG_LENGTH);
-  SecByteBlock head = snip_decryption(hashed_val);
-  out.value = head;
+
+  if (!lhs_b && !rhs_b) {
+    out.value = hashed_val;
+  } else {
+    int idx = 2 * lhs_b + rhs_b - 1;
+    auto entry = gate.entries[idx];
+    CryptoPP::xorbuf(hashed_val, entry, LABEL_LENGTH + LABEL_TAG_LENGTH);
+    out.value = hashed_val;
+  }
+
   return out;
 }
 
