@@ -168,10 +168,20 @@ GarbledWire EvaluatorClient::evaluate_gate(GarbledGate gate, GarbledWire lhs,
   if (!lhs_b && !rhs_b) {
     out.value = hashed_val;
   } else {
-    int idx = 2 * lhs_b + rhs_b - 1;
-    auto entry = gate.entries[idx];
-    CryptoPP::xorbuf(hashed_val, entry, LABEL_LENGTH + LABEL_TAG_LENGTH);
-    out.value = hashed_val;
+    int idx;
+    if (rhs.value == DUMMY_RHS) {
+      idx = lhs_b;
+    } else {
+      idx = 2 * lhs_b + rhs_b;
+    }
+
+    if (idx > 0) {
+      auto entry = gate.entries[idx-1];
+      CryptoPP::xorbuf(hashed_val, entry, LABEL_LENGTH + LABEL_TAG_LENGTH);
+      out.value = hashed_val;
+    } else {
+      out.value = hashed_val;
+    }
   }
 
   return out;

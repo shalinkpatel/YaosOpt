@@ -133,7 +133,8 @@ std::vector<GarbledGate> GarblerClient::generate_gates(Circuit circuit,
   // DONE: implement me!
   std::vector<GarbledGate> gates;
   for (auto gate : circuit.gates) {
-    std::vector<CryptoPP::SecByteBlock> entries(4);
+    int ne = gate.type == GateType::NOT_GATE ? 2 : 4;
+    std::vector<CryptoPP::SecByteBlock> entries(ne);
 
     auto w_left_0 = labels.zeros.at(gate.lhs);
     auto w_left_1 = labels.ones.at(gate.lhs);
@@ -153,7 +154,7 @@ std::vector<GarbledGate> GarblerClient::generate_gates(Circuit circuit,
       w_right_1 = dummy_wire;
 
       p_right_0 = first_bit(DUMMY_RHS);
-      p_right_1 = p_right_0;
+      p_right_1 = 1-p_right_0;
     }
 
     // No longer randomly shuffle, look at the last bit of each label to calculate where to put the correct encryption.
@@ -176,11 +177,11 @@ std::vector<GarbledGate> GarblerClient::generate_gates(Circuit circuit,
       // entries[index_1_0] = encrypt_label(w_left_1, w_right_0, labels.ones.at(gate.output));
       // entries[index_1_1] = encrypt_label(w_left_1, w_right_1, labels.zeros.at(gate.output));
     } else { // NOT_GATE
-      entries[index_0_0] = encrypt_label(w_left_0, w_right_0, labels.ones.at(gate.output));
-      entries[index_0_1] = encrypt_label(w_left_0, w_right_1, labels.ones.at(gate.output));
-      entries[index_1_0] = encrypt_label(w_left_1, w_right_0, labels.zeros.at(gate.output));
-      entries[index_1_1] = encrypt_label(w_left_1, w_right_1, labels.zeros.at(gate.output));
-
+      int index_0 = p_left_0;
+      int index_1 = p_left_1;
+      entries[index_0] = encrypt_label(w_left_0, w_right_0, labels.ones.at(gate.output));
+      entries[index_1] = encrypt_label(w_left_1, w_right_0, labels.zeros.at(gate.output));
+    
       entries.erase(entries.begin());
     }
     GarbledGate garbledGate;
